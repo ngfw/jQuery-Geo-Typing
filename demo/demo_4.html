@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Geo Typing Demo 4</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.geo.typing.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+$("#lang").change(function(){
+	if($(this).attr('checked')===true) { 
+		$(".georgian").geo();
+			//animation
+			$("#geo_typing_note").html("ქართული").fadeIn("slow", function() {
+							$(this).animate({opacity: '+=0'}, 1000).fadeOut("slow");							
+							});
+			
+	}else{
+		$(".georgian").geo({ turn: "off" });
+			//animation
+			$("#geo_typing_note").html("English").fadeIn("slow", function() {
+							$(this).animate({opacity: '+=0'}, 1000).fadeOut("slow");							
+							});
+	}
+});
+
+});
+</script>
+<style>
+#geo_typing_note{
+height: 20px;
+width: 100px;
+color:#FFF;
+background-color:#000;
+top: 20px;
+right: 20px;
+padding: 10px;
+position:absolute;
+z-index: 99999;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="geo_typing_note" align="center">  </div>
+
+<h2>დემო 4</h2>
+<em>ჩართვა გამორთვის ფუნქცია (კლასიკური) + შეტყობინება</em><hr /><br />
+
+<label>
+<input type="checkbox" id="lang" name="lang" /> ჩართვა / გამორთვა
+</label>
+<br />
+<br />
+
+<label>
+Input –ველი <br />
+<input type="text" id="some_input" name="some_input" class="georgian"><br />
+</label>
+<br />
+<label>
+Textarea -ველი:<br />
+<textarea id="some_textarea" class="georgian"></textarea>
+</label>
+<br /><hr />
+გამოყენების მაგალითი:<br />
+
+<fieldset>
+  <legend>Jquery</legend>
+    <p>$(document).ready(function() {</p>
+    <p>$(&quot;#lang&quot;).change(function(){<br />
+      if($(this).attr('checked')===true) { <br />
+      $(&quot;.georgian&quot;).geo();<br />
+      //animation<br />
+      $(&quot;#geo_typing_note&quot;).html(&quot;ქართული&quot;).fadeIn(&quot;slow&quot;, function() {<br />
+      $(this).animate({opacity: '+=0'}, 1000).fadeOut(&quot;slow&quot;); <br />
+      });<br />
+  <br />
+      }else{<br />
+      $(&quot;.georgian&quot;).geo({ turn: &quot;off&quot; });<br />
+      //animation<br />
+      $(&quot;#geo_typing_note&quot;).html(&quot;English&quot;).fadeIn(&quot;slow&quot;, function() {<br />
+      $(this).animate({opacity: '+=0'}, 1000).fadeOut(&quot;slow&quot;); <br />
+      });<br />
+      }<br />
+      });</p>
+    <p>});</p>
+</fieldset>
+<fieldset>
+  <legend>CSS</legend>
+    <p>#geo_typing_note{<br />
+      height: 20px;<br />
+      width: 100px;<br />
+      color:#FFF;<br />
+      background-color:#000;<br />
+      top: 20px;<br />
+      right: 20px;<br />
+      padding: 10px;<br />
+      position:absolute;<br />
+      z-index: 99999;<br />
+      -moz-border-radius: 5px;<br />
+      -webkit-border-radius: 5px;<br />
+    display:none;</p>
+</fieldset>
+<fieldset>
+  <legend>HTML</legend>
+    <p>&lt;!--შეტობინების ბლოკი--&gt;<br />
+      &lt;div id=&quot;geo_typing_note&quot; align=&quot;center&quot;&gt;  &lt;/div&gt;<br />
+<br />
+      &lt;!--ღილაკები --&gt;<br />
+      &lt;label&gt;<br />
+      &lt;input type=&quot;checkbox&quot; id=&quot;lang&quot; name=&quot;lang&quot; /&gt; ჩართვა / გამორთვა<br />
+    &lt;/label&gt;</p>
+    <p>&lt;!-- ველები --&gt;<br />
+    &lt;input type=&quot;text&quot; id=&quot;some_input&quot; name=&quot;some_input&quot; <font color="#FF0000"> class=&quot;georgian&quot;</font>&gt;    <br />
+  &lt;textarea id=&quot;some_textarea&quot; <font color="#FF0000">class=&quot;georgian&quot;</font>&gt;&lt;/textarea&gt;    </p>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Geo Typing Demo 1</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.geo.typing.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	// მივანიჭებთ ყველა ველს, რომელსაც ექნება კლასი georgian
+	$(".georgian").geo();
+	
+});
+</script>
+</head>
+
+<body>
+<h2>დემო 1</h2>
+<em>ფუნქცია ენიჭება ყველა ველს რომელსაც გააჩნია კლასი 'georgian'</em><hr /><br />
+
+
+
+
+<label>
+სახელი: <br />
+<input type="text" id="first_name" name="first_name" class="georgian"><br />
+</label>
+
+<label>
+გვარი: <br />
+<input type="text" id="last_name" name="last_name" class="georgian"><br />
+</label>
+
+<label>
+მომხმარებლის სახელი (არ აქვს მინიჭებული კლასი)<br />
+<input type="text" id="username" name="username"><br />
+</label>
+
+<label>
+მისამართი:<br />
+<input type="text" id="address" name="address" class="georgian"><br />
+</label>
+
+<br /><hr />
+გამოყენების მაგალითი:<br />
+
+<fieldset>
+  <legend>Jquery</legend>
+    <p>$(document).ready(function() {<br />
+     <font color="#FF0000"> $(&quot;.georgian&quot;).geo(); </font>
+  <br />
+    });</p>
+</fieldset>
+<fieldset>
+  <legend>HTML</legend>
+    <p>&lt;input type=&quot;text&quot; id=&quot;FieldID&quot; name=&quot;FieldNAME&quot; <font color="#FF0000">class=&quot;georgian&quot;</font>&gt;</p>
+</fieldset>
+</body>
+</html>

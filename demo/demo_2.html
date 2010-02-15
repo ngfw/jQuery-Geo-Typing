@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Geo Typing Demo 2</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.geo.typing.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+// on ღილაკზე დაჭერის დროს, ჩავტვირთოთ ფუნქცია
+$("#on").click(function(){
+	// მივანიჭებთ ყველა ველს, რომელსაც ექნება კლასი georgian
+	$(".georgian").geo();
+
+    //ღილაკები მანიპულაცია (არ არის სავალდებულო)
+	$("#off").removeAttr("disabled");
+	$(this).attr("disabled","disabled");
+});
+
+// on ღილაკზე დაჭერის დროს, გავთიშოთ ფუნქცია
+$("#off").click(function(){
+	// გასათიშად, ვაწვდით პარამეტრს turn : "off"
+	$(".georgian").geo({ turn: "off" });
+
+    //ღილაკები მანიპულაცია, (არ არის სავალდებულო)
+	$("#on").removeAttr("disabled");
+	$(this).attr("disabled","disabled");
+});
+
+
+});
+</script>
+</head>
+
+<body>
+<h2>დემო 2</h2>
+<em>ჩართვა გამორთვის ფუნქცია</em><hr /><br />
+
+<input type="button" value="ჩართვა" name="on" id="on" />
+<input type="button" value="გამორთვა" name="off" id="off" disabled="disabled"/>
+
+<br />
+<br />
+
+<label>
+Input –ველი <br />
+<input type="text" id="some_input" name="some_input" class="georgian"><br />
+</label>
+<br />
+<label>
+Textarea -ველი:<br />
+<textarea id="some_textarea" class="georgian"></textarea>
+</label>
+<br /><hr />
+გამოყენების მაგალითი:<br />
+
+<fieldset>
+  <legend>Jquery</legend>
+    <p>$(document).ready(function() {</p>
+    <p>      $(&quot;#on&quot;).click(function(){<br />
+      <font color="#FF0000"> $(&quot;.georgian&quot;).geo(); </font><br />
+  });</p>
+    <p>      $(&quot;#off&quot;).click(function(){<br />
+      <font color="#FF0000">$(&quot;.georgian&quot;).geo({ turn: &quot;off&quot; });</font><br />
+      });<br />
+  </p>
+    <p>});</p>
+</fieldset>
+<fieldset>
+  <legend>HTML</legend>
+    <p>&lt;!--ღილაკები --&gt;<br />      
+      &lt;input type=&quot;button&quot; value=&quot;ჩართვა&quot; name=&quot;on&quot; id=&quot;on&quot;/&gt;<br />
+    &lt;input type=&quot;button&quot; value=&quot;გამორთვა&quot; name=&quot;off&quot; id=&quot;off&quot;/&gt;</p>
+    <p>&lt;!-- ველები --&gt;<br />
+    &lt;input type=&quot;text&quot; id=&quot;some_input&quot; name=&quot;some_input&quot; <font color="#FF0000"> class=&quot;georgian&quot;</font>&gt;    <br />
+    &lt;textarea id=&quot;some_textarea&quot; <font color="#FF0000">class=&quot;georgian&quot;</font>&gt;&lt;/textarea&gt;    </p>
+</fieldset>
+</body>
+</html>
